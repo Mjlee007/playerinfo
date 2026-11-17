@@ -1727,3 +1727,10 @@ button.mh-badge { position: relative; padding: 0; cursor: pointer; font: inherit
 .hp-wk-fow { margin-left: auto; }
 @keyframes hp-wk-in { from { opacity: 0; transform: translate(-50%, 24px); } }
 @media (max-width: 560px) { .hp-wk-how { display: none; } .hp-wk-fow { margin-left: 0; } }
+
+/* wicket card: how out + bowler / fielder, always visible */
+.hp-wk-main { border-radius: 10px 10px 0 0 !important; }
+.hp-wk-name { flex: 1; }
+.hp-wk-by { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 1.2rem; padding: 0.45rem 0.9rem; border-radius: 0 0 10px 10px; background: rgba(5, 8, 18, 0.92); font-size: clamp(0.82rem, 2vw, 0.98rem); color: #b8c4dc; }
+.hp-wk-by b { color: #fff; font-weight: 800; }
+.hp-wk-how2 { color: #ffd23f; font-weight: 700; font-style: italic; }

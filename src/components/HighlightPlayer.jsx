@@ -26,6 +26,8 @@ const kit = (id) => {
   // coloured clothing: team shirt, dark team-tinted trousers, trim in the second colour
   return { shirt: t.accent, trousers: new Color(t.accent2).lerp(new Color("#0b1220"), 0.6).getStyle(), trim: t.accent2, code: t.code, team: t.name };
 };
+// who gets named on the wicket card, by how the batter was out
+const WK_ROLES = { c: { fielder: "Caught by" }, st: { fielder: "Stumped by" }, ro: { fielder: "Run out by" } };
 const otherOf = (teams, id) => teams.find((t) => t !== id) || TEAMS.find((t) => t.id !== id)?.id;
 
 // Last ground / light picked, remembered on this device.
@@ -522,11 +524,23 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
               <div className="hp-wk-main">
                 <b className="hp-wk-tag">OUT</b>
                 <span className="hp-wk-name">{wicketCard.batter}</span>
-                <span className="hp-wk-how">{wicketCard.how}</span>
                 <span className="hp-wk-score">
                   {wicketCard.runs}
                   <small>({wicketCard.balls})</small>
                 </span>
+              </div>
+              <div className="hp-wk-by">
+                <span className="hp-wk-how2">{wicketCard.how}</span>
+                {WK_ROLES[wicketCard.dismissal]?.fielder && wicketCard.fielder && wicketCard.fielder !== wicketCard.bowler && (
+                  <span>
+                    {WK_ROLES[wicketCard.dismissal].fielder} <b>{wicketCard.fielder}</b>
+                  </span>
+                )}
+                {wicketCard.bowler && (
+                  <span>
+                    {wicketCard.dismissal === "cb" ? "Caught & bowled" : "Bowler"} <b>{wicketCard.bowler}</b>
+                  </span>
+                )}
               </div>
             </div>
           )}
