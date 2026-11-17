@@ -7,7 +7,7 @@
 // kind: "result" | "star" | "milestone" | "wicket" | "six" | "four" | "funny" | "catch" | "drop" |
 //       "noball" | "freehit" | "wide" | "other"
 // rank: higher = more headline-worthy (used to pick the top few for recent-match cards).
-import { BOWLER_CREDIT, DISMISSALS, computeResult, toSeriesMatch } from "./scoring.js";
+import { BOWLER_CREDIT, DISMISSALS, computeResult, dismissalText, toSeriesMatch } from "./scoring.js";
 import { replay } from "./live.js";
 import { commentLine } from "./commentary.js";
 import { teamCode, teamName } from "./series.js";
@@ -41,6 +41,28 @@ export const FILTERS = [
 
 const plural = (n, word) => `${n} ${word}${n === 1 ? "" : word === "six" ? "es" : "s"}`;
 const hasBalls = (fx) => (fx.live?.events || []).some((list) => list.length);
+
+// The scorecard line for a dismissal: "Naresh  c Kiran b Ravi  12 (6)", boundaries, strike rate and
+// the fall of wicket, as on a professional scorecard.
+function dismissalCard(e, sc, entry, over) {
+  const w = e.wicket;
+  const fielder = w.how === "cb" ? e.bowler : w.fielder || "";
+  const bowler = BOWLER_CREDIT.has(w.how) ? e.bowler : "";
+  return {
+    batter: w.out,
+    how: dismissalText({ how: w.how, fielder, bowler }),
+    dismissal: w.how,
+    fielder,
+    bowler,
+    runs: sc.runs,
+    balls: sc.balls,
+    fours: sc.fours || 0,
+    sixes: sc.sixes || 0,
+    sr: sc.balls ? Math.round((sc.runs / sc.balls) * 1000) / 10 : 0,
+    fow: `${entry.score.runs}/${entry.score.wickets}`,
+    over,
+  };
+}
 
 // ---------- From the live ball log ----------
 // synthetic: the log was rebuilt from a scorecard, so skip moments that depend on the exact
@@ -86,8 +108,11 @@ function ballMoments(fx, { synthetic = false } = {}) {
       // Wickets
       if (e.wicket && DISMISSALS[e.wicket.how]?.[3]) {
         const outName = e.wicket.out;
-        add({ ...base, kind: "wicket", title: `WICKET · ${outName}`, text: c.text, rank: 3 });
         const sc = outScore || { runs: 0, balls: 0 };
+        const card = dismissalCard(e, sc, entry, over);
+        // a rebuilt (scorecard) match only knows the batter's figures, not when the wicket fell
+        if (synthetic) Object.assign(card, { fow: "", over: "" });
+        add({ ...base, kind: "wicket", title: `WICKET · ${outName} ${sc.runs} (${sc.balls})`, text: `${outName} ${card.how} ${sc.runs} (${sc.balls}). ${c.text}`, card, rank: 3 });
         if (sc.runs === 0 && sc.balls <= 1) add({ ...base, kind: "funny", title: "Golden duck", text: `${outName} is out first ball. Long walk back to the pavilion.`, rank: 4 });
         else if (sc.runs === 0) add({ ...base, kind: "funny", title: "Duck", text: `${outName} goes for 0 off ${plural(sc.balls, "ball")}.`, rank: 3 });
         if (sc.runs === 49 || (sc.runs >= 90 && sc.runs <= 99)) add({ ...base, kind: "funny", title: sc.runs === 49 ? "So close to fifty" : "Nervous nineties", text: `${outName} falls on ${sc.runs}. So near, yet so far.`, rank: 4 });

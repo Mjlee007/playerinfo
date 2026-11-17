@@ -117,6 +117,29 @@ function AddMoment({ matchId, teams, onDone }) {
   );
 }
 
+// A dismissal as on a professional scorecard: batter, how out, runs (balls), boundaries, SR, FoW.
+export function WicketLine({ card }) {
+  return (
+    <div className="wk-line" aria-label={`${card.batter} ${card.how} ${card.runs} off ${card.balls} balls`}>
+      <span className="wk-name">{card.batter}</span>
+      <span className="wk-how">{card.how}</span>
+      <span className="wk-score">
+        <b>{card.runs}</b>
+        <small>({card.balls})</small>
+      </span>
+      <span className="wk-stats">
+        4s <b>{card.fours}</b> · 6s <b>{card.sixes}</b> · SR <b>{card.sr.toFixed(1)}</b>
+      </span>
+      {card.fow && (
+        <span className="wk-fow">
+          FoW {card.fow}
+          {card.over ? ` (${card.over} ov)` : ""}
+        </span>
+      )}
+    </div>
+  );
+}
+
 // Highlights reel for one match: filters, the moments, and "Add a moment".
 // compact: no filters / adding, shows `limit` items and a link to the full list.
 export default function MatchHighlights({ matchId, moments, teams, title = "Match highlights", compact = false, limit, moreTo, live = false, playerTitle, date, time, venue }) {
@@ -186,7 +209,8 @@ export default function MatchHighlights({ matchId, moments, teams, title = "Matc
                   </small>
                 )}
               </span>
-              {m.text && <p>{m.text}</p>}
+              {m.card && <WicketLine card={m.card} />}
+              {m.text && <p>{m.card ? m.text.replace(/^.*?\(\d+\)\.\s*/, "") : m.text}</p>}
             </div>
             {matchId && !compact && (
               <button type="button" className={`icon-btn mh-vid ${m.videoKey ? "on" : ""}`} onClick={() => setVideoFor(m)} aria-label={m.videoKey ? `Edit the match video for: ${m.title}` : `Add a match video for: ${m.title}`} title={m.videoKey ? "Edit match video" : "Add match video (your own footage)"}>

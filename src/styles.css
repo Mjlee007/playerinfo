@@ -1703,3 +1703,27 @@ button.mh-badge { position: relative; padding: 0; cursor: pointer; font: inherit
   .hp-segs { display: none; }
   .hp-caption { bottom: 0.6rem; }
 }
+
+/* ---------- dismissal: scorecard strip (list) and wicket card (video) ---------- */
+.wk-line { display: flex; flex-wrap: wrap; align-items: baseline; gap: 0.25rem 0.7rem; margin: 0.35rem 0 0.25rem; padding: 0.45rem 0.65rem; border-radius: 10px; background: var(--surface-2, rgba(255, 255, 255, 0.05)); border-left: 3px solid #ff5d6c; font-size: 0.86rem; }
+.wk-name { font-weight: 800; }
+.wk-how { color: var(--muted, #8a93a6); font-style: italic; }
+.wk-score { margin-left: auto; font-variant-numeric: tabular-nums; }
+.wk-score b { font-size: 1.05rem; }
+.wk-score small { margin-left: 0.15rem; color: var(--muted, #8a93a6); }
+.wk-stats, .wk-fow { width: 100%; font-size: 0.75rem; color: var(--muted, #8a93a6); font-variant-numeric: tabular-nums; }
+.wk-stats b { color: inherit; font-weight: 700; }
+.wk-fow { width: auto; }
+.wk-stats { width: auto; }
+.hp-wk { --team: #ff7a2e; position: absolute; left: 50%; bottom: 1.1rem; z-index: 3; transform: translateX(-50%); width: min(720px, calc(100% - 1.6rem)); color: #fff; filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.6)); animation: hp-wk-in 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both; pointer-events: none; }
+.hp-wk-main { display: flex; align-items: stretch; overflow: hidden; border-radius: 10px 10px 0 0; background: linear-gradient(180deg, #121a33, #0a1022); border-top: 3px solid var(--team); }
+.hp-wk-tag { display: grid; place-items: center; padding: 0 0.85rem; background: #e11d48; font-size: 1rem; font-weight: 900; letter-spacing: 0.08em; }
+.hp-wk-name { align-self: center; padding: 0.55rem 0.8rem; font-size: clamp(1rem, 2.6vw, 1.45rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
+.hp-wk-how { align-self: center; color: #b8c4dc; font-style: italic; font-size: clamp(0.8rem, 1.8vw, 1rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }
+.hp-wk-score { display: flex; align-items: baseline; gap: 0.2rem; padding: 0.4rem 0.9rem; background: var(--team); font-size: clamp(1.3rem, 3.4vw, 1.9rem); font-weight: 900; font-variant-numeric: tabular-nums; text-shadow: 0 1px 3px rgba(0, 0, 0, 0.35); }
+.hp-wk-score small { font-size: 0.55em; font-weight: 800; opacity: 0.9; }
+.hp-wk-sub { display: flex; flex-wrap: wrap; gap: 0.2rem 1.1rem; padding: 0.4rem 0.9rem; border-radius: 0 0 10px 10px; background: rgba(5, 8, 18, 0.9); font-size: 0.8rem; color: #b8c4dc; font-variant-numeric: tabular-nums; }
+.hp-wk-sub b { color: #fff; }
+.hp-wk-fow { margin-left: auto; }
+@keyframes hp-wk-in { from { opacity: 0; transform: translate(-50%, 24px); } }
+@media (max-width: 560px) { .hp-wk-how { display: none; } .hp-wk-fow { margin-left: 0; } }

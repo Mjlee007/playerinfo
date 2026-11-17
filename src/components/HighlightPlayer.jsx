@@ -117,6 +117,7 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
   const [gfxPanel, setGfxPanel] = useState(false);
   const fpsRef = useRef(null);
   const [wipe, setWipe] = useState(null); // { key, text }
+  const [wicketCard, setWicketCard] = useState(null); // the dismissal graphic, shown once the batter is out
   const wipeN = useRef(0);
   const showWipe = (text) => setWipe({ key: ++wipeN.current, text });
   const chooseQuality = (q) => {
@@ -175,6 +176,16 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
   };
 
   const m = moments[index];
+  // show the scorecard graphic when the wicket falls (first "w" burst of a wicket moment)
+  useEffect(() => {
+    if (burst?.tone === "w" && m?.card && !String(burst.text).startsWith("UMPIRE")) setWicketCard({ ...m.card, team: m.team || m.bat, key: burst.key });
+  }, [burst, m]);
+  useEffect(() => {
+    if (!wicketCard) return undefined;
+    const id = setTimeout(() => setWicketCard(null), 7000);
+    return () => clearTimeout(id);
+  }, [wicketCard]);
+  useEffect(() => setWicketCard(null), [index]);
   const videoNow = videosOn && !!m?.videoKey && started;
 
   // The player on a match video's lower-third card.
@@ -352,6 +363,8 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
       }
       const mo = moments[idxRef.current];
       const top = mo?.welcome ? ground.name.toUpperCase() : title.toUpperCase();
+      // the big screen names the batter with their score when he's out
+      if (mo?.card && f.screen?.color === "#ff5d6c") f.screen = { ...f.screen, small: `${mo.card.batter} ${mo.card.runs} (${mo.card.balls})` };
       w.setScreen(f.screen ? { top, ...f.screen } : { top, big: mo?.score || "PLAYER INFO", small: mo?.title || "" });
       w.setCamera(f.cam, dt);
       w.render(now / 1000);
@@ -501,6 +514,36 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
             </div>
           )}
           {showFps && <span className="hp-fps" ref={fpsRef} />}
+          {wicketCard && (
+            <div className="hp-wk" key={wicketCard.key} style={{ "--team": kit(wicketCard.team || teams[0]).shirt }} role="status">
+              <div className="hp-wk-main">
+                <b className="hp-wk-tag">OUT</b>
+                <span className="hp-wk-name">{wicketCard.batter}</span>
+                <span className="hp-wk-how">{wicketCard.how}</span>
+                <span className="hp-wk-score">
+                  {wicketCard.runs}
+                  <small>({wicketCard.balls})</small>
+                </span>
+              </div>
+              <div className="hp-wk-sub">
+                <span>
+                  4s <b>{wicketCard.fours}</b>
+                </span>
+                <span>
+                  6s <b>{wicketCard.sixes}</b>
+                </span>
+                <span>
+                  SR <b>{wicketCard.sr.toFixed(1)}</b>
+                </span>
+                {wicketCard.fow && (
+                  <span className="hp-wk-fow">
+                    Fall of wicket <b>{wicketCard.fow}</b>
+                    {wicketCard.over ? ` · ${wicketCard.over} ov` : ""}
+                  </span>
+                )}
+              </div>
+            </div>
+          )}
           {slowMo && <span className={`hp-slow ${slowMo === "HAWK-EYE" ? "hawk" : ""}`}>{slowMo}</span>}
           {burst && (
             <div className={`hp-burst ${burst.tone}`} key={burst.key}>
@@ -520,7 +563,7 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
               <span className="hp-welcome-match">{title}</span>
             </div>
           )}
-          {m && !m.welcome && (
+          {m && !m.welcome && !wicketCard && (
             <div className={`hp-caption ${m.kind}`} key={`cap-${index}`}>
               <span className="hp-cap-kind">
                 {m.team && <b className={`team-tag ${m.team}`}>{teamCode(m.team)}</b>}

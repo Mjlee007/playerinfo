@@ -32,7 +32,8 @@ const tx = async (mode, fn) => {
 };
 
 // Stable key for a highlight: match + innings + over + kind + title (ids can shift during live scoring).
-export const clipKey = (matchId, m) => [matchId || "match", m.inn ?? "", m.over ?? "", m.kind, m.title].join("::");
+// (wicket titles now carry the score; keep the original title so attached videos stay linked)
+export const clipKey = (matchId, m) => [matchId || "match", m.inn ?? "", m.over ?? "", m.kind, m.kind === "wicket" && m.card ? `WICKET · ${m.card.batter}` : m.title].join("::");
 
 // { key, blob, name, type, size, start, end, peak, added }
 export async function saveClip(clip) {

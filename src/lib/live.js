@@ -101,7 +101,7 @@ export function replay(fx, k) {
     let outScore = null;
     if (e.wicket) {
       const o = getBat(e.wicket.out);
-      outScore = { runs: o.runs, balls: o.balls };
+      outScore = { runs: o.runs, balls: o.balls, fours: o.fours, sixes: o.sixes };
       const how = e.wicket.how;
       o.how = how;
       o.fielder = how === "cb" ? e.bowler : e.wicket.fielder || "";
