@@ -1,0 +1,1898 @@
+{
+  "name": "NRV vs VPN T20 Series 2026",
+  "format": "T20",
+  "matches": [
+    {
+      "id": "m1",
+      "no": 1,
+      "title": "Match 1",
+      "date": "2026-09-20",
+      "venue": "Riverside Ground",
+      "toss": {
+        "winner": "nrv",
+        "decision": "bat"
+      },
+      "innings": [
+        {
+          "team": "nrv",
+          "runs": 178,
+          "wickets": 7,
+          "balls": 120,
+          "overs": "20",
+          "extras": 10,
+          "batting": [
+            {
+              "name": "Chandu",
+              "team": "nrv",
+              "runs": 34,
+              "balls": 31,
+              "fours": 4,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 27,
+              "balls": 18,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 32,
+              "balls": 19,
+              "fours": 2,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Sai.J",
+              "team": "nrv",
+              "runs": 12,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Lava",
+              "team": "nrv",
+              "runs": 18,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "runs": 15,
+              "balls": 14,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Chetan",
+              "team": "nrv",
+              "runs": 15,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "runs": 13,
+              "balls": 8,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "runs": 2,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 31,
+              "wickets": 0
+            },
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 0
+            },
+            {
+              "name": "Dhanush",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 43,
+              "wickets": 5
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 30,
+              "wickets": 0
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 31,
+              "wickets": 2
+            }
+          ],
+          "catches": [
+            "Dhanush",
+            "Jyothisagar",
+            "Gurumoorthy",
+            "P Deva",
+            "Jyothisagar",
+            "Dhanush",
+            "Tiru Virat"
+          ]
+        },
+        {
+          "team": "vpn",
+          "runs": 180,
+          "wickets": 2,
+          "balls": 111,
+          "overs": "18.3",
+          "extras": 5,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 54,
+              "balls": 33,
+              "fours": 5,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 45,
+              "balls": 26,
+              "fours": 4,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 41,
+              "balls": 34,
+              "fours": 4,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 35,
+              "balls": 21,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 39,
+              "wickets": 0
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 32,
+              "wickets": 0
+            },
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 41,
+              "wickets": 1
+            },
+            {
+              "name": "Chetan",
+              "team": "nrv",
+              "overs": "3.3",
+              "balls": 21,
+              "runs": 29,
+              "wickets": 0
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "overs": "3",
+              "balls": 18,
+              "runs": 34,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "Bupa",
+            "Dileep"
+          ]
+        }
+      ],
+      "winner": "vpn",
+      "result": "VPN Legends won by 8 wickets",
+      "potm": {
+        "name": "Dhanush",
+        "team": "vpn"
+      }
+    },
+    {
+      "id": "m2",
+      "no": 2,
+      "title": "Match 2",
+      "date": "2026-09-28",
+      "venue": "Municipal Stadium",
+      "toss": {
+        "winner": "vpn",
+        "decision": "bowl"
+      },
+      "innings": [
+        {
+          "team": "nrv",
+          "runs": 141,
+          "wickets": 6,
+          "balls": 120,
+          "overs": "20",
+          "extras": 11,
+          "batting": [
+            {
+              "name": "J Hema",
+              "team": "nrv",
+              "runs": 13,
+              "balls": 12,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Chandu",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 28,
+              "balls": 22,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Kiran",
+              "team": "nrv",
+              "runs": 28,
+              "balls": 22,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Lava",
+              "team": "nrv",
+              "runs": 18,
+              "balls": 15,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "J Harish",
+              "team": "nrv",
+              "runs": 14,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "runs": 7,
+              "balls": 6,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Chetan",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 10,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 25,
+              "wickets": 0
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 23,
+              "wickets": 2
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 1
+            },
+            {
+              "name": "Gurumoorthy",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 24,
+              "wickets": 1
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 2
+            }
+          ],
+          "catches": [
+            "Tiru Virat",
+            "Giri"
+          ]
+        },
+        {
+          "team": "vpn",
+          "runs": 143,
+          "wickets": 6,
+          "balls": 108,
+          "overs": "18",
+          "extras": 10,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 25,
+              "balls": 19,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 34,
+              "balls": 31,
+              "fours": 3,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 15,
+              "balls": 14,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 16,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Deva",
+              "team": "vpn",
+              "runs": 13,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "runs": 15,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "runs": 5,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "runs": 10,
+              "balls": 10,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "J Harish",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 24,
+              "wickets": 1
+            },
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 25,
+              "wickets": 0
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 2
+            },
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "overs": "3",
+              "balls": 18,
+              "runs": 27,
+              "wickets": 2
+            },
+            {
+              "name": "Saran",
+              "team": "nrv",
+              "overs": "3",
+              "balls": 18,
+              "runs": 28,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "J Harish",
+            "Yugandhar",
+            "Bupa",
+            "Chandu"
+          ]
+        }
+      ],
+      "winner": "vpn",
+      "result": "VPN Legends won by 4 wickets",
+      "potm": {
+        "name": "K Hariprasad",
+        "team": "vpn"
+      }
+    },
+    {
+      "id": "m3",
+      "no": 3,
+      "title": "Match 3",
+      "date": "2026-10-08",
+      "venue": "College Ground",
+      "toss": {
+        "winner": "nrv",
+        "decision": "bowl"
+      },
+      "innings": [
+        {
+          "team": "vpn",
+          "runs": 166,
+          "wickets": 5,
+          "balls": 120,
+          "overs": "20",
+          "extras": 12,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 27,
+              "balls": 26,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 20,
+              "balls": 13,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 31,
+              "balls": 19,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 18,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Deva",
+              "team": "vpn",
+              "runs": 23,
+              "balls": 14,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "runs": 22,
+              "balls": 15,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "runs": 13,
+              "balls": 8,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 36,
+              "wickets": 1
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 25,
+              "wickets": 0
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 3
+            },
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 39,
+              "wickets": 1
+            },
+            {
+              "name": "Saran",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 25,
+              "wickets": 0
+            }
+          ],
+          "catches": [
+            "Vicky",
+            "Dileep",
+            "J Harish",
+            "Dileep"
+          ]
+        },
+        {
+          "team": "nrv",
+          "runs": 135,
+          "wickets": 10,
+          "balls": 102,
+          "overs": "17",
+          "extras": 9,
+          "batting": [
+            {
+              "name": "Chandu",
+              "team": "nrv",
+              "runs": 30,
+              "balls": 19,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 14,
+              "balls": 10,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 14,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Kiran",
+              "team": "nrv",
+              "runs": 14,
+              "balls": 8,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Prem",
+              "team": "nrv",
+              "runs": 16,
+              "balls": 12,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 6,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "J Harish",
+              "team": "nrv",
+              "runs": 9,
+              "balls": 8,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Manoj",
+              "team": "nrv",
+              "runs": 4,
+              "balls": 5,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "runs": 2,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Saran",
+              "team": "nrv",
+              "runs": 1,
+              "balls": 1,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 31,
+              "wickets": 1
+            },
+            {
+              "name": "Gurumoorthy",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 2
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 19,
+              "wickets": 1
+            },
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 26,
+              "wickets": 5
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 17,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "Dhanush",
+            "Yoga",
+            "Jyothisagar",
+            "B Deva",
+            "Yoga",
+            "B Harish"
+          ]
+        }
+      ],
+      "winner": "vpn",
+      "result": "VPN Legends won by 31 runs",
+      "potm": {
+        "name": "Yoga",
+        "team": "vpn"
+      }
+    },
+    {
+      "id": "m4",
+      "no": 4,
+      "title": "Match 4",
+      "date": "2026-10-11",
+      "venue": "Town Sports Complex",
+      "toss": {
+        "winner": "vpn",
+        "decision": "bat"
+      },
+      "innings": [
+        {
+          "team": "vpn",
+          "runs": 164,
+          "wickets": 5,
+          "balls": 120,
+          "overs": "20",
+          "extras": 7,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 30,
+              "balls": 18,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 24,
+              "balls": 17,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 29,
+              "balls": 23,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 28,
+              "balls": 23,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Deva",
+              "team": "vpn",
+              "runs": 14,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "runs": 15,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "runs": 17,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Saran",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 32,
+              "wickets": 0
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 32,
+              "wickets": 0
+            },
+            {
+              "name": "Hemanth",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 24,
+              "wickets": 1
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 2
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 36,
+              "wickets": 2
+            }
+          ],
+          "catches": [
+            "Naresh",
+            "Hemanth"
+          ]
+        },
+        {
+          "team": "nrv",
+          "runs": 166,
+          "wickets": 2,
+          "balls": 101,
+          "overs": "16.5",
+          "extras": 9,
+          "batting": [
+            {
+              "name": "J Hema",
+              "team": "nrv",
+              "runs": 55,
+              "balls": 40,
+              "fours": 6,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 46,
+              "balls": 30,
+              "fours": 3,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 41,
+              "balls": 31,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Sai.J",
+              "team": "nrv",
+              "runs": 15,
+              "balls": 12,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Dhanush",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 39,
+              "wickets": 1
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "overs": "3.5",
+              "balls": 23,
+              "runs": 40,
+              "wickets": 0
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 32,
+              "wickets": 1
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 25,
+              "wickets": 0
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "3",
+              "balls": 18,
+              "runs": 21,
+              "wickets": 0
+            }
+          ],
+          "catches": [
+            "Gurumoorthy",
+            "Tiru Virat"
+          ]
+        }
+      ],
+      "winner": "nrv",
+      "result": "NRV Legends won by 8 wickets",
+      "potm": {
+        "name": "Yugandhar",
+        "team": "nrv"
+      }
+    },
+    {
+      "id": "m5",
+      "no": 5,
+      "title": "Match 5",
+      "date": "2026-10-14",
+      "venue": "Riverside Ground",
+      "toss": {
+        "winner": "vpn",
+        "decision": "bat"
+      },
+      "innings": [
+        {
+          "team": "vpn",
+          "runs": 151,
+          "wickets": 4,
+          "balls": 120,
+          "overs": "20",
+          "extras": 8,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 50,
+              "balls": 47,
+              "fours": 4,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 14,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 16,
+              "balls": 10,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 16,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Revanth",
+              "team": "vpn",
+              "runs": 28,
+              "balls": 23,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "runs": 19,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 1
+            },
+            {
+              "name": "Chetan",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 32,
+              "wickets": 0
+            },
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 1
+            },
+            {
+              "name": "Hemanth",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 26,
+              "wickets": 0
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 23,
+              "wickets": 2
+            }
+          ],
+          "catches": [
+            "Lava",
+            "Chetan",
+            "Lava"
+          ]
+        },
+        {
+          "team": "nrv",
+          "runs": 117,
+          "wickets": 9,
+          "balls": 120,
+          "overs": "20",
+          "extras": 6,
+          "batting": [
+            {
+              "name": "J Hema",
+              "team": "nrv",
+              "runs": 17,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Chandu",
+              "team": "nrv",
+              "runs": 25,
+              "balls": 16,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 9,
+              "balls": 7,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Kiran",
+              "team": "nrv",
+              "runs": 15,
+              "balls": 12,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Lava",
+              "team": "nrv",
+              "runs": 18,
+              "balls": 14,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "runs": 8,
+              "balls": 6,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Chetan",
+              "team": "nrv",
+              "runs": 7,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "runs": 5,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "runs": 4,
+              "balls": 4,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Hemanth",
+              "team": "nrv",
+              "runs": 2,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "runs": 1,
+              "balls": 1,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Dhanush",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 24,
+              "wickets": 1
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 18,
+              "wickets": 2
+            },
+            {
+              "name": "Gurumoorthy",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 23,
+              "wickets": 0
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 22,
+              "wickets": 6
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 24,
+              "wickets": 0
+            }
+          ],
+          "catches": [
+            "Manoj",
+            "B Harish",
+            "Jyothisagar",
+            "K Hariprasad",
+            "Giri",
+            "P Deva"
+          ]
+        }
+      ],
+      "winner": "vpn",
+      "result": "VPN Legends won by 34 runs",
+      "potm": {
+        "name": "K Hariprasad",
+        "team": "vpn"
+      }
+    },
+    {
+      "id": "m6",
+      "no": 6,
+      "title": "Match 6",
+      "date": "2026-10-30",
+      "venue": "Municipal Stadium",
+      "toss": {
+        "winner": "nrv",
+        "decision": "bat"
+      },
+      "innings": [
+        {
+          "team": "nrv",
+          "runs": 172,
+          "wickets": 6,
+          "balls": 120,
+          "overs": "20",
+          "extras": 9,
+          "batting": [
+            {
+              "name": "Chandu",
+              "team": "nrv",
+              "runs": 34,
+              "balls": 20,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 43,
+              "balls": 38,
+              "fours": 4,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 19,
+              "balls": 13,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Sai.J",
+              "team": "nrv",
+              "runs": 13,
+              "balls": 10,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Lava",
+              "team": "nrv",
+              "runs": 19,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 6,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "runs": 9,
+              "balls": 8,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Dileep",
+              "team": "nrv",
+              "runs": 15,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 1
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 33,
+              "wickets": 0
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 40,
+              "wickets": 1
+            },
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 28,
+              "wickets": 3
+            },
+            {
+              "name": "Dhanush",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "B Harish",
+            "Jyothisagar",
+            "Jyothisagar",
+            "Tiru Virat"
+          ]
+        },
+        {
+          "team": "vpn",
+          "runs": 174,
+          "wickets": 2,
+          "balls": 109,
+          "overs": "18.1",
+          "extras": 10,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 63,
+              "balls": 43,
+              "fours": 6,
+              "sixes": 1,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 38,
+              "balls": 23,
+              "fours": 4,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 43,
+              "balls": 28,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 20,
+              "balls": 15,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 32,
+              "wickets": 0
+            },
+            {
+              "name": "Vinod",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 42,
+              "wickets": 0
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 31,
+              "wickets": 1
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "overs": "3.1",
+              "balls": 19,
+              "runs": 36,
+              "wickets": 0
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "overs": "3",
+              "balls": 18,
+              "runs": 23,
+              "wickets": 1
+            }
+          ],
+          "catches": []
+        }
+      ],
+      "winner": "vpn",
+      "result": "VPN Legends won by 8 wickets",
+      "potm": {
+        "name": "P Deva",
+        "team": "vpn"
+      }
+    },
+    {
+      "id": "m7",
+      "no": 7,
+      "title": "Match 7",
+      "date": "2026-11-01",
+      "venue": "College Ground",
+      "toss": {
+        "winner": "nrv",
+        "decision": "bat"
+      },
+      "innings": [
+        {
+          "team": "nrv",
+          "runs": 172,
+          "wickets": 9,
+          "balls": 120,
+          "overs": "20",
+          "extras": 7,
+          "batting": [
+            {
+              "name": "J Hema",
+              "team": "nrv",
+              "runs": 35,
+              "balls": 25,
+              "fours": 3,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "runs": 31,
+              "balls": 20,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "runs": 26,
+              "balls": 22,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Kiran",
+              "team": "nrv",
+              "runs": 13,
+              "balls": 10,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Lava",
+              "team": "nrv",
+              "runs": 19,
+              "balls": 13,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Naresh",
+              "team": "nrv",
+              "runs": 10,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "J Harish",
+              "team": "nrv",
+              "runs": 11,
+              "balls": 9,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "runs": 13,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Manoj",
+              "team": "nrv",
+              "runs": 2,
+              "balls": 2,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "runs": 4,
+              "balls": 3,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Hasan",
+              "team": "nrv",
+              "runs": 1,
+              "balls": 1,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 30,
+              "wickets": 0
+            },
+            {
+              "name": "Gurumoorthy",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 40,
+              "wickets": 5
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 34,
+              "wickets": 2
+            },
+            {
+              "name": "Dhanush",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 35,
+              "wickets": 1
+            },
+            {
+              "name": "Giri",
+              "team": "vpn",
+              "overs": "4",
+              "balls": 24,
+              "runs": 26,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "Tiru Virat",
+            "Revanth",
+            "B Harish"
+          ]
+        },
+        {
+          "team": "vpn",
+          "runs": 142,
+          "wickets": 6,
+          "balls": 120,
+          "overs": "20",
+          "extras": 10,
+          "batting": [
+            {
+              "name": "P Deva",
+              "team": "vpn",
+              "runs": 24,
+              "balls": 15,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Tiru Virat",
+              "team": "vpn",
+              "runs": 25,
+              "balls": 17,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Jyothisagar",
+              "team": "vpn",
+              "runs": 14,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "B Harish",
+              "team": "vpn",
+              "runs": 9,
+              "balls": 8,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Revanth",
+              "team": "vpn",
+              "runs": 25,
+              "balls": 16,
+              "fours": 2,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "K Hariprasad",
+              "team": "vpn",
+              "runs": 14,
+              "balls": 11,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": false
+            },
+            {
+              "name": "Manoj",
+              "team": "vpn",
+              "runs": 8,
+              "balls": 6,
+              "fours": 0,
+              "sixes": 0,
+              "notOut": true
+            },
+            {
+              "name": "Yoga",
+              "team": "vpn",
+              "runs": 13,
+              "balls": 10,
+              "fours": 1,
+              "sixes": 0,
+              "notOut": true
+            }
+          ],
+          "bowling": [
+            {
+              "name": "Venu",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 29,
+              "wickets": 2
+            },
+            {
+              "name": "Bupa",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 28,
+              "wickets": 2
+            },
+            {
+              "name": "Yugandhar",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 25,
+              "wickets": 0
+            },
+            {
+              "name": "J Harish",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 28,
+              "wickets": 1
+            },
+            {
+              "name": "Vicky",
+              "team": "nrv",
+              "overs": "4",
+              "balls": 24,
+              "runs": 22,
+              "wickets": 1
+            }
+          ],
+          "catches": [
+            "Kiran",
+            "Yugandhar",
+            "Kiran",
+            "J Hema",
+            "Manoj"
+          ]
+        }
+      ],
+      "winner": "nrv",
+      "result": "NRV Legends won by 30 runs",
+      "potm": {
+        "name": "Bupa",
+        "team": "nrv"
+      }
+    }
+  ]
+}

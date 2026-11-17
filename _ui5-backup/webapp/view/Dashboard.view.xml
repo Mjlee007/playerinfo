@@ -1,0 +1,37 @@
+<mvc:View
+controllerName="cricket.controller.Dashboard"
+xmlns:mvc="sap.ui.core.mvc"
+xmlns="sap.m"
+xmlns:tnt="sap.tnt">
+
+<tnt:ToolPage>
+
+<tnt:sideContent>
+
+<tnt:SideNavigation>
+
+<tnt:NavigationList>
+
+<tnt:NavigationListItem
+text="Players"
+select="onPlayersPress"/>
+
+</tnt:NavigationList>
+
+</tnt:SideNavigation>
+
+</tnt:sideContent>
+
+<tnt:mainContents>
+
+<Page title="Dashboard">
+
+<Text text="Welcome to Cricket Dashboard"/>
+
+</Page>
+
+</tnt:mainContents>
+
+</tnt:ToolPage>
+
+</mvc:View>

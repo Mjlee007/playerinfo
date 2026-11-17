@@ -1,0 +1,20 @@
+<mvc:View
+ controllerName="cricket.controller.Login"
+ xmlns:mvc="sap.ui.core.mvc"
+ xmlns="sap.m">
+
+<Page title="Login">
+
+<VBox width="300px" class="sapUiSmallMargin" alignItems="Center">
+
+<Input id="username" placeholder="Username"/>
+
+<Input id="password" placeholder="Password" type="Password"/>
+
+<Button text="Login" press="onLogin"/>
+
+</VBox>
+
+</Page>
+
+</mvc:View>
