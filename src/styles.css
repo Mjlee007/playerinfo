@@ -1716,7 +1716,7 @@ button.mh-badge { position: relative; padding: 0; cursor: pointer; font: inherit
 .wk-fow { width: auto; }
 .wk-stats { width: auto; }
 .hp-wk { --team: #ff7a2e; position: absolute; left: 50%; bottom: 1.1rem; z-index: 3; transform: translateX(-50%); width: min(720px, calc(100% - 1.6rem)); color: #fff; filter: drop-shadow(0 14px 26px rgba(0, 0, 0, 0.6)); animation: hp-wk-in 0.55s cubic-bezier(0.2, 0.9, 0.2, 1) both; pointer-events: none; }
-.hp-wk-main { display: flex; align-items: stretch; overflow: hidden; border-radius: 10px 10px 0 0; background: linear-gradient(180deg, #121a33, #0a1022); border-top: 3px solid var(--team); }
+.hp-wk-main { display: flex; align-items: stretch; overflow: hidden; border-radius: 10px; background: linear-gradient(180deg, #121a33, #0a1022); border-top: 3px solid var(--team); }
 .hp-wk-tag { display: grid; place-items: center; padding: 0 0.85rem; background: #e11d48; font-size: 1rem; font-weight: 900; letter-spacing: 0.08em; }
 .hp-wk-name { align-self: center; padding: 0.55rem 0.8rem; font-size: clamp(1rem, 2.6vw, 1.45rem); font-weight: 900; text-transform: uppercase; letter-spacing: 0.02em; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; }
 .hp-wk-how { align-self: center; color: #b8c4dc; font-style: italic; font-size: clamp(0.8rem, 1.8vw, 1rem); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; min-width: 0; flex: 1; }

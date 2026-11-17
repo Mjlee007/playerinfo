@@ -176,15 +176,7 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
   };
 
   const m = moments[index];
-  // show the scorecard graphic when the wicket falls (first "w" burst of a wicket moment)
-  useEffect(() => {
-    if (burst?.tone === "w" && m?.card && !String(burst.text).startsWith("UMPIRE")) setWicketCard({ ...m.card, team: m.team || m.bat, key: burst.key });
-  }, [burst, m]);
-  useEffect(() => {
-    if (!wicketCard) return undefined;
-    const id = setTimeout(() => setWicketCard(null), 7000);
-    return () => clearTimeout(id);
-  }, [wicketCard]);
+  // the scorecard graphic shows while the out batter walks off (the last 3 s of a wicket)
   useEffect(() => setWicketCard(null), [index]);
   const videoNow = videosOn && !!m?.videoKey && started;
 
@@ -233,6 +225,11 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
     const bat = mo.bat || mo.team || teams[0];
     const p = mo.play || {};
     const names = { striker: p.striker || p.out, nonStriker: p.nonStriker, bowler: p.bowler };
+    if (p.how === "ro" && p.out) {
+      // the 3D run out happens at the non-striker's end
+      names.nonStriker = p.out;
+      names.striker = p.out === p.striker ? p.nonStriker || "" : p.striker;
+    }
     if (clip.winners) {
       const winner = mo.team || teams[0];
       const loser = otherOf(teams, winner);
@@ -324,6 +321,7 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
     let lastSlow = false;
     let lastReplay = false;
     let frameT = 0;
+    let lastWalk = false;
     let lastStumps = -1;
     const frame = (now) => {
       raf = requestAnimationFrame(frame);
@@ -352,6 +350,10 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
       applyFrame(w, f, t);
       const au = audioRef.current;
       const moNow = moments[idxRef.current];
+      if (!!f.walkoff !== lastWalk) {
+        lastWalk = !!f.walkoff;
+        setWicketCard(lastWalk && moNow?.card ? { ...moNow.card, team: moNow.team || moNow.bat, key: `${idxRef.current}-walk` } : null);
+      }
       au.excite(f.replay ? 0.15 : f.excite ?? 0.1);
       if (!f.replay && prevT < CONTACT && t >= CONTACT && hitsBall(moNow)) au.bat();
       const sb = Math.max(f.st.stumpsBat ?? -1, f.st.stumpsBowl ?? -1);
@@ -476,6 +478,7 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
               barRef={barRef}
               onBurst={setBurst}
               onSlow={setSlowMo}
+              onWalkoff={(on) => setWicketCard(on && m.card ? { ...m.card, team: m.team || m.bat, key: `${index}-walk` } : null)}
               onEnd={() => {
                 if (idxRef.current < moments.length - 1) go(idxRef.current + 1);
                 else {
@@ -524,23 +527,6 @@ export default function HighlightPlayer({ moments: input, start = 0, teams = [],
                   {wicketCard.runs}
                   <small>({wicketCard.balls})</small>
                 </span>
-              </div>
-              <div className="hp-wk-sub">
-                <span>
-                  4s <b>{wicketCard.fours}</b>
-                </span>
-                <span>
-                  6s <b>{wicketCard.sixes}</b>
-                </span>
-                <span>
-                  SR <b>{wicketCard.sr.toFixed(1)}</b>
-                </span>
-                {wicketCard.fow && (
-                  <span className="hp-wk-fow">
-                    Fall of wicket <b>{wicketCard.fow}</b>
-                    {wicketCard.over ? ` · ${wicketCard.over} ov` : ""}
-                  </span>
-                )}
               </div>
             </div>
           )}

@@ -37,7 +37,7 @@ const REPLAY_RATE = 0.35;
 
 // Plays a highlight's real footage: the trimmed clip, then a slow-motion replay around the big
 // moment, with the TV graphic, a lower-third player card, the crowd roar and commentary.
-export default function VideoMoment({ moment, playing, rate, sound, audio, people, onEnd, onBurst, onSlow, barRef }) {
+export default function VideoMoment({ moment, playing, rate, sound, audio, people, onEnd, onBurst, onSlow, onWalkoff, barRef }) {
   const ref = useRef(null);
   const [clip, setClip] = useState(null);
   const [url, setUrl] = useState("");
@@ -47,7 +47,7 @@ export default function VideoMoment({ moment, playing, rate, sound, audio, peopl
   const fired = useRef(false);
   const ended = useRef(false);
   const cb = useRef({});
-  cb.current = { onEnd, onBurst, onSlow, audio, playing, rate };
+  cb.current = { onEnd, onBurst, onSlow, onWalkoff, audio, playing, rate };
 
   useEffect(() => {
     let alive = true;
@@ -85,7 +85,14 @@ export default function VideoMoment({ moment, playing, rate, sound, audio, peopl
       ended.current = true;
       v.pause();
       cb.current.onSlow("");
-      cb.current.onEnd();
+      // a wicket: hold the last frame with the scorecard graphic for 3 s, then move on
+      if (moment.card && cb.current.onWalkoff) {
+        cb.current.onWalkoff(true);
+        setTimeout(() => {
+          cb.current.onWalkoff(false);
+          cb.current.onEnd();
+        }, 3000);
+      } else cb.current.onEnd();
     };
     v.currentTime = start;
     let raf;

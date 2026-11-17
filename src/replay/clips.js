@@ -277,6 +277,41 @@ function withHawkEye(clip, { freezeAt, path, pitch, impact, stumps, dur = 5 }) {
   };
 }
 
+// The batter walks off: the last shot of a wicket highlight. A TV close-up from in front of him
+// while the scorecard graphic shows (frame.walkoff), then the next highlight starts.
+const WALK_OFF = 3.2;
+function withWalkOff(full, live, { who = "striker", forceWalk = false } = {}) {
+  const end = full.duration;
+  return {
+    ...full,
+    duration: end + WALK_OFF,
+    update(t) {
+      if (t <= end) return full.update(t);
+      const lt = t - end;
+      // the rest of the field carries on from the end of the live action
+      const f = live.update(live.duration + lt);
+      const st = { ...f.st, ball: null };
+      if (forceWalk) {
+        // this batter wasn't walking yet (e.g. run out at the other end): start now
+        const f0 = live.update(live.duration);
+        st[who] = f0.st[who];
+        walkOff(lt, 0, st, who);
+      }
+      const p = st[who];
+      const to = v3(PAVILION.x - p.x, 0, PAVILION.z - p.z).normalize();
+      const side = v3(to.z, 0, -to.x);
+      const cam = {
+        id: "walkoff",
+        pos: v3(p.x + to.x * 5.2 + side.x * 1.2, 1.7, p.z + to.z * 5.2 + side.z * 1.2),
+        look: v3(p.x, 1.25, p.z),
+        fov: 30,
+        ease: 14,
+      };
+      return { ...f, st, cam, excite: 0.35, replay: false, walkoff: true };
+    },
+  };
+}
+
 // Umpire's decision: after the live action, cut to the umpire and zoom in as the signal is given.
 const SIGNAL = {
   out: { pose: "umpOut", text: "OUT!", tone: "w" },
@@ -468,7 +503,8 @@ function caughtClip(m, { dropped = false, diving = false, how = "c" } = {}) {
     const p = v3(s.fielders[fi].x, 0, s.fielders[fi].z);
     return { id: "catchcam", pos: v3(p.x + sideV.x * 6 - dir.x * 3, 1.9, p.z + sideV.z * 6 - dir.z * 3), look: v3(p.x, 1.4, p.z), fov: 30 };
   };
-  return withReplay(dropped ? clip : withDecision(withCrowd(clip, 1.5), "out"), { from: T_CATCH - 0.9, to: T_CATCH + 0.5, rate: 0.35, cam: near });
+  const full = withReplay(dropped ? clip : withDecision(withCrowd(clip, 1.5), "out"), { from: T_CATCH - 0.9, to: T_CATCH + 0.5, rate: 0.35, cam: near });
+  return dropped ? full : withWalkOff(full, clip);
 }
 
 function caughtAndBowled(m) {
@@ -488,7 +524,7 @@ function caughtAndBowled(m) {
       return { st, cam, excite: t > T ? 1 : 0.1, screen: t > T ? { big: "OUT!", small: `c & b ${nameOf(m, "bowler")}`, color: "#ff5d6c" } : null };
     },
   };
-  return withReplay(withDecision(clip, "out"), { from: C - 0.3, to: T + 0.3, cam: () => ({ id: "cbr", pos: v3(-3, 1.2, 5.5), look: v3(1.4, 0.7, 8), fov: 28 }) });
+  return withWalkOff(withReplay(withDecision(clip, "out"), { from: C - 0.3, to: T + 0.3, cam: () => ({ id: "cbr", pos: v3(-3, 1.2, 5.5), look: v3(1.4, 0.7, 8), fov: 28 }) }), clip);
 }
 
 function bowledClip(m, { duck = false, mobAt = null } = {}) {
@@ -520,7 +556,7 @@ function bowledClip(m, { duck = false, mobAt = null } = {}) {
       return { st, cam, excite: t > HIT ? 0.9 : 0.1, screen: t > HIT + 0.3 ? { big: mobAt ? mobAt.replace("!", "") : "BOWLED!", small: nameOf(m, "bowler"), color: "#ff5d6c" } : null };
     },
   };
-  return withReplay(withDecision(withCrowd(clip, 1.5), "out"), { from: C - 0.4, to: HIT + 0.6, rate: 0.3, cam: () => CAM.stump() });
+  return withWalkOff(withReplay(withDecision(withCrowd(clip, 1.5), "out"), { from: C - 0.4, to: HIT + 0.6, rate: 0.3, cam: () => CAM.stump() }), clip);
 }
 
 function lbwClip(m) {
@@ -554,7 +590,7 @@ function lbwClip(m) {
   const I = v3(0.2, 0.35, -8.85);
   const S = v3(0.06, 0.42, -10.05);
   const path = [...Array(21)].map((_, i) => arc(R, B, 0.12, i / 20)).concat([...Array(11)].map((_, i) => arc(B, I, 0.18, (i + 1) / 11)));
-  return withHawkEye(withReplay(withDecision(clip, "out"), { from: C - 0.4, to: C + 0.3, rate: 0.3, cam: () => CAM.side(-9) }), { freezeAt: C + 0.05, path, pitch: B, impact: I, stumps: S });
+  return withWalkOff(withHawkEye(withReplay(withDecision(clip, "out"), { from: C - 0.4, to: C + 0.3, rate: 0.3, cam: () => CAM.side(-9) }), { freezeAt: C + 0.05, path, pitch: B, impact: I, stumps: S }), clip);
 }
 
 function stumpedClip(m) {
@@ -584,7 +620,7 @@ function stumpedClip(m) {
       return { st, cam, excite: t > T_BREAK ? 0.9 : 0.1, screen: t > T_BREAK + 0.3 ? { big: "STUMPED!", small: nameOf(m, "bowler"), color: "#ff5d6c" } : null };
     },
   };
-  return withReplay(withDecision(clip, "out"), { from: C + 0.1, to: T_BREAK + 0.3, rate: 0.3, cam: () => ({ id: "stbehind", pos: v3(-3.5, 1.0, -11.5), look: v3(0, 0.5, -9.5), fov: 30 }) });
+  return withWalkOff(withReplay(withDecision(clip, "out"), { from: C + 0.1, to: T_BREAK + 0.3, rate: 0.3, cam: () => ({ id: "stbehind", pos: v3(-3.5, 1.0, -11.5), look: v3(0, 0.5, -9.5), fov: 30 }) }), clip);
 }
 
 function runOutClip(m) {
@@ -631,7 +667,7 @@ function runOutClip(m) {
       return { st, cam, excite: t > T_HIT ? 1 : 0.3, screen: t > T_HIT + 0.3 ? { big: "RUN OUT!", small: nameOf(m, "out"), color: "#ff5d6c" } : null };
     },
   };
-  return withReplay(withDecision(clip, "out"), { from: T_HIT - 0.5, to: T_HIT + 0.3, rate: 0.3, cam: () => ({ id: "rosq", pos: v3(-8, 1.2, 8.9), look: v3(0, 0.5, 9.2), fov: 26 }) });
+  return withWalkOff(withReplay(withDecision(clip, "out"), { from: T_HIT - 0.5, to: T_HIT + 0.3, rate: 0.3, cam: () => ({ id: "rosq", pos: v3(-8, 1.2, 8.9), look: v3(0, 0.5, 9.2), fov: 26 }) }), clip, { who: "nonStriker", forceWalk: true });
 }
 
 function hitWicketClip() {
@@ -652,7 +688,7 @@ function hitWicketClip() {
       return { st, cam, excite: t > HIT ? 0.8 : 0.1, screen: t > HIT + 0.3 ? { big: "HIT WICKET", small: "Oops!", color: "#c6f45b" } : null };
     },
   };
-  return withReplay(withDecision(clip, "out"), { from: C - 0.3, to: HIT + 0.5, rate: 0.3, cam: () => CAM.stump() });
+  return withWalkOff(withReplay(withDecision(clip, "out"), { from: C - 0.3, to: HIT + 0.5, rate: 0.3, cam: () => CAM.stump() }), clip);
 }
 
 // Wides: the ball goes well down the off side; with reps > 1 it happens again… and again.
